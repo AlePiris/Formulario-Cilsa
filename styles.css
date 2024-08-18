@@ -50,3 +50,17 @@ h1{
 .Formulario button:hover {
     background-color: #48c1d9; /* Color de fondo cuando se pasa el mouse */
 }
+.Formulario button:active {
+    background-color: #ac2525; /* Color del botón al presionarlo */
+}
+.alto-contraste {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.alto-contraste input, .alto-contraste button {
+    background-color: black;
+    color: white;
+    border-color: white;
+}

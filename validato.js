@@ -7,6 +7,18 @@ document.querySelector('.Formulario').addEventListener('submit', function(event)
     const fechaNacimiento = document.querySelector('input[name="fecha_nacimiento"]').value;
     const pais = document.querySelector('input[name="text"]').value;
 
+ // Validación de nombre y apellido
+    const nombreRegex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+    if (!nombreRegex.test(nombre)) {
+            alert("El nombre solo debe contener letras y no debe incluir espacios en blanco.");
+            return;
+        }
+    
+    if (!nombreRegex.test(apellido)) {
+            alert("El apellido solo debe contener letras y no debe incluir espacios en blanco.");
+            return;
+        }
+
     // Validación de fecha de nacimiento (mínimo 18 años)
     const hoy = new Date();
     const fechaNac = new Date(fechaNacimiento);
